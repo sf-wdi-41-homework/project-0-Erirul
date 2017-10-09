@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <!-- set viewport to device width to make site responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- bootstrap css -->
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- custom styles -->
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+  <title>Racing Game</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header text-center">
+          <img src="flags.png">
+          <h1>Racing Game</h1>
+          <img src="flags.png">
+        </div>
+        <image src="road.jpg" id="track">
+          <image src="car1.png" class="player" data-key="a"></div>
+          <image src="car2.png" class="player" data-key="l"></div>
+          <style>
+
+#track {
+  height: 370px;
+  padding: 5px 0;
+  width: 100%;
+  z-index:1; 
+  position: absolute;
+}
+
+.player {
+  position: relative;
+  margin-top:40px;
+  width: 20%;
+  z-index: 2;
+}
+
+</style> 
+        </div>
+        <button class="btn btn-lg btn-reset tmp-hidden" id="reset">Race Again</button>
+      </div>
+    </div>
+  </div>
+
+  <div>
+  <form name="form1">
+Seconds <input type="text" name="seconds" value="0" size="7">
+</form>
+<script LANGUAGE="JavaScript">
+var seconds=4;
+
+ID=window.setTimeout("update();",0);
+
+function update() {
+  document.form1.seconds.value = seconds;
+
+  if (seconds>0){
+    ID=window.setTimeout("update();",1000);
+  } else {
+    document.form1.seconds.value = 'Finish';
+  }
+
+  seconds=seconds-1;
+};
+</script>
+  </div>
+  <!-- jquery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <!-- custom script -->
+  <script type="text/javascript" src="/Users/laurengoff/WDI/project-0-Erirul/app.js"></script>
+</body>
+</html>
