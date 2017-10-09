@@ -1,1 +1,41 @@
+body {
+  }
+
+h1 {
+  margin: 0 10px;
+}
+
+form {
+  margin-top:50px;
+}
+
+.header {
+  margin: 30px 0;
+}
+.header * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+img {
+  height: 120px;
+}
+
+.btn-reset, .btn-reset:focus {
+  background-color: #f2183d;
+  color: white;
+  left: 0;
+  margin: 30px auto;
+  position: absolute;
+  right: 0;
+  width: 130px;
+  z-index: 2;
+}
+.btn-reset:hover {
+  background-color: #4ecdc4;
+  color: white;
+}
+.tmp-hidden {
+  display: none;
+}
 
